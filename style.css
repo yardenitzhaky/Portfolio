@@ -226,22 +226,46 @@ html {
 }
 
 @media screen and (max-width: 600px) {
+    /* Adjust the position of the timeline's vertical line */
     .timeline::after {
-        left: 31px;
+        left: 20px; /* Position the vertical line closer to the left edge */
     }
     
+    /* Ensure timeline items take full width and have appropriate padding */
     .timeline-item {
         width: 100%;
-        padding-left: 70px;
+        padding-left: 60px; /* Increased padding to accommodate the circle */
         padding-right: 25px;
+        margin-bottom: 30px; /* Add space between timeline items */
     }
     
+    /* Adjust the position and size of the timeline circles */
     .timeline-item::after {
-        left: 15px;
+        left: 0px; /* Align circles directly on the vertical line */
+        width: 15px; /* Reduce size for better fit */
+        height: 15px;
+        border-width: 3px; /* Adjust border thickness if needed */
     }
     
+    /* Ensure even timeline items align correctly */
     .timeline-item:nth-child(even) {
-        left: 0%;
+        left: 0; /* Remove left offset for even items */
+    }
+    
+    .timeline-item:nth-child(even)::after {
+        left: 0px; /* Align circles directly on the vertical line */
+    }
+    
+    /* Optional: Adjust the timeline content for better readability */
+    .timeline-content {
+        padding: 15px 25px; /* Reduce padding for smaller screens */
+        border-radius: 5px; /* Slightly smaller border radius */
+    }
+    
+    /* Optional: Adjust text alignment if needed */
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        text-align: left; /* Align text to the left for consistency */
     }
 }
 
