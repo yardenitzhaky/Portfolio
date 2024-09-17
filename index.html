@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarden Itzhaky - Portfolio</title>
+    <!-- External CSS libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.css">
+    <meta name="description" content="Yarden Itzhaky's Portfolio - Computer Science student specializing in software development, machine learning, and web development.">
+    <meta name="keywords" content="Yarden Itzhaky, Portfolio, Computer Science, Software Development, Machine Learning, Web Development">
+    <meta name="author" content="Yarden Itzhaky">
+    <meta property="og:title" content="Yarden Itzhaky - Portfolio">
+    <meta property="og:description" content="Computer Science student specializing in software development, machine learning, and web development.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">YI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <header class="hero bg-primary text-white text-center parallax">
+        <div id="particles-js"></div>
+        <div class="container hero-content">
+            <h1 class="display-4 mb-4">Yarden Itzhaky</h1>
+            <a href="#about" class="btn btn-outline-light btn-lg btn-glow" aria-label="About Me">About Me</a>
+        </div>
+    </header>
+
+    <!-- About section -->
+    <section id="about" class="py-5 fade-in-section">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <div class="col-md-6 d-flex flex-column" data-aos="fade-right">
+                    <div class="about-content h-100">
+                        <h3>About Me</h3>
+                        <p class="lead">
+                            Hey👋, I'm Yarden, a passionate Computer Science student at the University of Haifa, always eager to learn new technologies and tackle challenging problems. My journey in the world of coding is driven by curiosity and a desire to create impactful solutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column" data-aos="fade-left">
+                    <div class="about-content h-100">
+                        <h3>Quick Facts</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Education:</strong> BSc in Computer Science (Expected graduation: 2025-2026)</li>
+                            <li class="list-group-item"><strong>Languages:</strong> C/C++, Java, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Interests:</strong> Software Development, Machine Learning, AI, Web Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects" class="py-5 bg-light parallax fade-in-section">
+        <div class="container">
+            <h2 class="text-center mb-5 animated-underline">Projects</h2>
+            <div class="card project-card" data-aos="fade-up">
+                <div class="card-body">
+                    <h3 class="card-title">🎬 Movie Theater Management System</h3>
+                    <h4 class="card-subtitle mb-2 text-muted">Java | JavaFX | Hibernate</h4>
+                    <p class="card-text">A comprehensive system designed to manage multiple aspects of a movie theater chain, including ticket sales, movie schedules, customer management, and reporting.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Ticket sales management</li>
+                        <li class="list-group-item">Movie scheduling</li>
+                        <li class="list-group-item">Customer management</li>
+                        <li class="list-group-item">Reporting functionality</li>
+                        <li class="list-group-item">User-friendly GUI</li>
+                    </ul>
+                    <a href="https://github.com/danielbob32/TheaterManager" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="py-5 fade-in-section">
+        <div class="container">
+            <h2 class="text-center mb-5 animated-underline">Skills</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="skill-bar" data-progress="95">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">C/C++</span>
+                    </div>
+                    <div class="skill-bar" data-progress="80">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">Java</span>
+                    </div>
+                    <div class="skill-bar" data-progress="75">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">Python</span>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="skill-bar" data-progress="85">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">HTML/CSS</span>
+                    </div>
+                    <div class="skill-bar" data-progress="70">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-bar" data-progress="65">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5" data-aos="fade-up">
+                <h3 class="text-center mb-4">Additional Skills</h3>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <span class="badge bg-primary m-2">Git</span>
+                    <span class="badge bg-primary m-2">Docker</span>
+                    <span class="badge bg-primary m-2">Kubernetes</span>
+                    <span class="badge bg-primary m-2">RESTful API Design</span>
+                    <span class="badge bg-primary m-2">Linux</span>
+                    <span class="badge bg-primary m-2">Bash Scripting</span>
+                    <span class="badge bg-primary m-2">Node.js</span>
+                    <span class="badge bg-primary m-2">React.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience section -->
+    <section id="experience" class="py-5 parallax fade-in-section">
+        <div class="container">
+            <h2 class="text-center mb-5 animated-underline">Other Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <h3 class="timeline-title">Professional Basketball Referee</h3>
+                    <p class="timeline-date">2019 - Present</p>
+                    <p class="timeline-description">Refereed over 1,000 games at various levels, developing strong communication and decision-making skills under pressure.</p>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <h3 class="timeline-title">Military Service - Golani Brigade</h3>
+                    <p class="timeline-date">2019 - 2021</p>
+                    <p class="timeline-description">Completed full service, developing resilience and teamwork skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 animated-underline">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form action="https://formspree.io/f/mvgpnnwa" method="POST">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New contact form submission">
+                        <input type="text" name="_gotcha" style="display:none">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg btn-glow">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="https://github.com/yardenitzhaky" class="text-white me-3" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/yardenitzhaky/" class="text-white" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+            <p>&copy; 2024 Yarden Itzhaky. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+
+    <!-- External JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+</body>
+</html>
