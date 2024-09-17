@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
 
     // Initialize particles.js for background particle effect
-    particlesJS.load('particles-js', './assets/particles.json', function() { // Added './' for relative path
+    particlesJS.load('particles-js', './particles.json', function() { 
         console.log('particles.js loaded');
     });
 
@@ -27,35 +27,75 @@ $(document).ready(function() {
     var backToTop = $('.back-to-top');
     backToTop.hide();
 
-    // Scroll event handler
+    // // Scroll event handler
+    // $(window).on('scroll', function() {
+    //     var scrollPos = $(document).scrollTop();
+
+    //     // Show or hide the back-to-top button
+    //     if (scrollPos > 300) {
+    //         backToTop.fadeIn();
+    //     } else {
+    //         backToTop.fadeOut();
+    //     }
+
+    //     // Active Navigation State
+    //     $('nav a.nav-link').each(function() {
+    //         var currLink = $(this);
+    //         var refElement = $(currLink.attr("href"));
+
+    //         if (refElement.length) {
+    //             var refElementTop = refElement.offset().top - 150;
+    //             var refElementBottom = refElementTop + refElement.outerHeight();
+
+    //             if (scrollPos >= refElementTop && scrollPos < refElementBottom) {
+    //                 $('nav ul li a.nav-link').removeClass("active");
+    //                 currLink.addClass("active");
+    //             } else {
+    //                 currLink.removeClass("active");
+    //             }
+    //         }
+    //     });
+    // });
+
     $(window).on('scroll', function() {
         var scrollPos = $(document).scrollTop();
-
+    
         // Show or hide the back-to-top button
         if (scrollPos > 300) {
             backToTop.fadeIn();
         } else {
             backToTop.fadeOut();
         }
-
+    
         // Active Navigation State
-        $('nav a.nav-link').each(function() {
+        var navLinks = $('nav a.nav-link');
+        var windowHeight = $(window).height();
+        var docHeight = $(document).height();
+    
+        navLinks.each(function() {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
-
+    
             if (refElement.length) {
-                var refElementTop = refElement.offset().top - 150; // Increased offset
+                var refElementTop = refElement.offset().top - 150;
                 var refElementBottom = refElementTop + refElement.outerHeight();
-
+    
                 if (scrollPos >= refElementTop && scrollPos < refElementBottom) {
-                    $('nav ul li a.nav-link').removeClass("active");
+                    navLinks.removeClass("active");
                     currLink.addClass("active");
                 } else {
                     currLink.removeClass("active");
                 }
             }
         });
+    
+        // Check if scrolled to bottom
+        if (scrollPos + windowHeight >= docHeight - 50) {
+            navLinks.removeClass("active");
+            navLinks.last().addClass('active');
+        }
     });
+    
 
     // Click event for back-to-top button
     backToTop.on('click', function(e) {
