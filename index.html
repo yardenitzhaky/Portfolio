@@ -1,432 +1,223 @@
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite, wavyBackground 10s ease-in-out infinite;
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 50px; /* Added padding at the bottom */
-}
-
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes wavyBackground {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.3)" fill-opacity="0.5" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-    background-size: cover;
-    animation: wave 10s linear infinite;
-    opacity: 0.5;
-}
-
-@keyframes wave {
-    0% {
-        background-position-x: 0;
-    }
-    100% {
-        background-position-x: 1440px;
-    }
-}
-
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    animation: fadeInUp 1s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.project-card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: none;
-    border-radius: 30px;
-    overflow: hidden;
-    animation: fadeIn 1s ease-out;
-    background-color: #fff; /* Ensure the card has a background color */
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.project-card .card-body {
-    display: block !important; /* Ensure the card body is always visible */
-}
-
-.skill-bar {
-    height: 30px;
-    background-color: #e9ecef;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-}
-
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(45deg, #007bff, #00bcd4);
-    width: 0;
-    transition: width 1.5s ease-in-out;
-    border-radius: 15px;
-    animation: skillPulse 2s infinite;
-}
-
-@keyframes skillPulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
-    }
-}
-
-.skill-name {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
-    font-weight: bold;
-    z-index: 1;
-}
-
-.social-icons a {
-    font-size: 24px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.social-icons a:hover {
-    color: #00bcd4 !important;
-    transform: translateY(-5px) scale(1.1);
-}
-
-/* Add smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Add a subtle animation to buttons */
-.btn {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 150px; /* Ensure the timeline doesn't overflow into the next section */
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #007bff;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-    margin-bottom: 50px;
-}
-
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #007bff;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-}
-
-.timeline-item:nth-child(even)::after {
-    left: -16px;
-}
-
-.timeline-content {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
-    border-radius: 6px;
-}
-
-@media screen and (max-width: 600px) {
-    .timeline::after {
-        left: 31px;
-    }
-    
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    
-    .timeline-item::after {
-        left: 15px;
-    }
-    
-    .timeline-item:nth-child(even) {
-        left: 0%;
-    }
-}
-
-.badge {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-}
-
-/* Enhanced background effect */
-.hero {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite, wavyBackground 10s ease-in-out infinite;
-    position: relative;
-    overflow: hidden;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Scroll-triggered animations */
-.fade-in-section {
-    opacity: 0;
-    transform: translateY(20vh);
-    visibility: hidden;
-    transition: opacity 1200ms ease-out, transform 600ms ease-out,
-    visibility 1200ms ease-out;
-    will-change: opacity, transform, visibility;
-}
-
-.fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-}
-
-/* Parallax effect for sections */
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Animated underline for section headers */
-.animated-underline {
-    position: relative;
-    display: inline-block;
-}
-
-.animated-underline::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #0087ca;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.animated-underline:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-/* Floating animation for project cards */
-@keyframes float {
-    0% { transform: translatey(0px); }
-    50% { transform: translatey(-20px); }
-    100% { transform: translatey(0px); }
-}
-
-.project-card {
-    animation: float 6s ease-in-out infinite;
-}
-
-/* Glowing effect for buttons */
-@keyframes glowing {
-    0% { box-shadow: 0 0 -10px #00bcd4; }
-    40% { box-shadow: 0 0 20px #00bcd4; }
-    60% { box-shadow: 0 0 20px #00bcd4; }
-    100% { box-shadow: 0 0 -10px #00bcd4; }
-}
-
-.btn-glow:hover {
-    animation: glowing 5000ms infinite;
-}
-
-section {
-    padding-top: 40px; /* Further decreased padding-top */
-    margin-top: -40px; /* Adjusted margin to match the new padding */
-}
-
-/* Adjust specific styling for the About section */
-#about {
-    padding-top: 100px; /* Increased padding at the top */
-    padding-bottom: 100px; /* Add padding at the bottom */
-    margin-top: 50px; /* Add margin at the top to create space after the hero */
-    margin-bottom: 50px; /* Add margin at the bottom */
-}
-
-#about .row {
-    display: flex;
-    align-items: stretch;
-}
-
-#about .col-md-6 {
-    display: flex;
-    flex-direction: column;
-}
-
-.about-content {
-    background-color: #f8f9fa;
-    padding: 30px; /* Increased padding */
-    border-radius: 15px; /* Slightly increased border radius */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Added subtle shadow */
-}
-
-#about .list-group {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#about .list-group-item {
-    border: none;
-    background-color: transparent;
-    padding: 10px 0;
-}
-
-@media (max-width: 767px) {
-    #about .col-md-6:last-child {
-        margin-top: 2rem;
-    }
-}
-
-.nav-link.active {
-    color: #00bcd4;
-    border-bottom: 2px solid #00bcd4;
-}
-
-.back-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px;
-    border-radius: 50%;
-    z-index: 9999; /* Increased z-index */
-    display: none;
-    transition: background-color 0.3s ease;
-    cursor: pointer; /* Add cursor pointer */
-}
-
-.back-to-top i {
-    font-size: 20px; /* Ensure the icon is visible */
-}
-
-.back-to-top:hover {
-    background-color: #0056b3;
-}
-
-#skills {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-bottom: 50px; /* Add margin at the bottom */
-    margin-top: 35px;
-}
-
-#projects {
-    padding-top: 100px; /* Add padding at the top */
-    margin-top: 50px; /* Add margin at the top */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarden Itzhaky - Portfolio</title>
+    <!-- External CSS libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.css">
+    <meta name="description" content="Yarden Itzhaky's Portfolio - Computer Science student specializing in software development, machine learning, and web development.">
+    <meta name="keywords" content="Yarden Itzhaky, Portfolio, Computer Science, Software Development, Machine Learning, Web Development">
+    <meta name="author" content="Yarden Itzhaky">
+    <meta property="og:title" content="Yarden Itzhaky - Portfolio">
+    <meta property="og:description" content="Computer Science student specializing in software development, machine learning, and web development.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+    <meta name="twitter:card" content="summary_large_image">
 
 
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">YI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero section -->
+    <header class="hero bg-primary text-white text-center parallax">
+        <div id="particles-js"></div>
+        <div class="container hero-content">
+            <h1 class="display-4 mb-4">Yarden Itzhaky</h1>
+            <a href="#about" class="btn btn-outline-light btn-lg btn-glow" aria-label="About Me">About Me</a>
+        </div>
+    </header>
+
+    <!-- About section -->
+    <section id="about" class="py-5 fade-in-section">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <div class="col-md-6 d-flex flex-column" data-aos="fade-right">
+                    <div class="about-content h-100">
+                        <h3>About Me</h3>
+                        <p class="lead">
+                            Hey👋, I'm Yarden, a passionate Computer Science student at the University of Haifa, always eager to learn new technologies and tackle challenging problems. My journey in the world of coding is driven by curiosity and a desire to create impactful solutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column" data-aos="fade-left">
+                    <div class="about-content h-100">
+                        <h3>Quick Facts</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Education:</strong> BSc in Computer Science (Expected graduation: 2025-2026)</li>
+                            <li class="list-group-item"><strong>Languages:</strong> C/C++, Java, Python, JavaScript</li>
+                            <li class="list-group-item"><strong>Interests:</strong> Software Development, Machine Learning, AI, Web Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects" class="py-5 bg-light parallax fade-in-section">
+        <div class="container">
+            <h2 class="text-center mb-5 animated-underline">Projects</h2>
+            <div class="card project-card" data-aos="fade-up">
+                <div class="card-body">
+                    <h3 class="card-title">🎬 Movie Theater Management System</h3>
+                    <h4 class="card-subtitle mb-2 text-muted">Java | JavaFX | Hibernate</h4>
+                    <p class="card-text">A comprehensive system designed to manage multiple aspects of a movie theater chain, including ticket sales, movie schedules, customer management, and reporting.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Ticket sales management</li>
+                        <li class="list-group-item">Movie scheduling</li>
+                        <li class="list-group-item">Customer management</li>
+                        <li class="list-group-item">Reporting functionality</li>
+                        <li class="list-group-item">User-friendly GUI</li>
+                    </ul>
+                    <a href="https://github.com/danielbob32/TheaterManager" class="btn btn-primary" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="py-5 fade-in-section">
+        <div class="container">
+            <h2 class="text-center mb-5 animated-underline">Skills</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="skill-bar" data-progress="95">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">C/C++</span>
+                    </div>
+                    <div class="skill-bar" data-progress="80">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">Java</span>
+                    </div>
+                    <div class="skill-bar" data-progress="75">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">Python</span>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="skill-bar" data-progress="85">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">HTML/CSS</span>
+                    </div>
+                    <div class="skill-bar" data-progress="70">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-bar" data-progress="65">
+                        <div class="skill-progress"></div>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5" data-aos="fade-up">
+                <h3 class="text-center mb-4">Additional Skills</h3>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <span class="badge bg-primary m-2">Git</span>
+                    <span class="badge bg-primary m-2">Docker</span>
+                    <span class="badge bg-primary m-2">Kubernetes</span>
+                    <span class="badge bg-primary m-2">RESTful API Design</span>
+                    <span class="badge bg-primary m-2">Linux</span>
+                    <span class="badge bg-primary m-2">Bash Scripting</span>
+                    <span class="badge bg-primary m-2">Node.js</span>
+                    <span class="badge bg-primary m-2">React.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience section -->
+    <section id="experience" class="py-5 parallax fade-in-section">
+        <div class="container">
+            <h2 class="text-center mb-5 animated-underline">Other Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <h3 class="timeline-title">Professional Basketball Referee</h3>
+                    <p class="timeline-date">2019 - Present</p>
+                    <p class="timeline-description">Refereed over 1,000 games at various levels, developing strong communication and decision-making skills under pressure.</p>
+                </div>
+                <div class="timeline-item" data-aos="fade-up">
+                    <h3 class="timeline-title">Military Service - Golani Brigade</h3>
+                    <p class="timeline-date">2019 - 2021</p>
+                    <p class="timeline-description">Completed full service, developing resilience and teamwork skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 animated-underline">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form action="https://formspree.io/f/mvgpnnwa" method="POST">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New contact form submission">
+                        <input type="text" name="_gotcha" style="display:none">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg btn-glow">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="https://github.com/yardenitzhaky" class="text-white me-3" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/yardenitzhaky/" class="text-white" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+            <p>&copy; 2024 Yarden Itzhaky. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+
+    <!-- External JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+</body>
+</html>
