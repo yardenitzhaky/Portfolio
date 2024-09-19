@@ -1,9 +1,8 @@
 # 🌟 Yarden Itzhaky - Portfolio
 
-[![Website](https://img.shields.io/website-up-down-green-red/https/your-portfolio-url.com.svg)]([https://your-portfolio-url.com](https://yardenitzhaky.github.io/Portfolio/)) [![GitHub followers](https://img.shields.io/github/followers/yardenitzhaky.svg?style=social&label=Follow)](https://github.com/yardenitzhaky)
+[![Website](https://img.shields.io/website-up-down-green-red/https/yardenitzhaky.github.io/Portfolio.svg)](https://yardenitzhaky.github.io/Portfolio/) [![GitHub followers](https://img.shields.io/github/followers/yardenitzhaky.svg?style=social&label=Follow)](https://github.com/yardenitzhaky)
 
 Welcome to my personal portfolio website! Explore my projects, skills, and get in touch.
-
 
 ## ✨ Features
 
