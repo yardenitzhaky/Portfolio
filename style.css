@@ -1,5 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 .hero {
@@ -90,6 +92,7 @@ body {
     overflow: hidden;
     animation: fadeIn 1s ease-out;
     background-color: #fff; /* Ensure the card has a background color */
+    max-width: 100%;
 }
 
 .project-card:hover {
@@ -108,6 +111,7 @@ body {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .skill-progress {
@@ -450,6 +454,49 @@ section {
 #projects {
     padding-top: 100px; /* Add padding at the top */
     margin-top: 50px; /* Add margin at the top */
+}
+
+/* Add these new styles at the end of the file */
+
+/* Ensure all images and media are responsive */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust container max-width for larger screens */
+.container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Adjust timeline for smaller screens */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    
+    .timeline-item::after {
+        left: 15px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
 }
 
 
