@@ -19,7 +19,7 @@ $(document).ready(function() {
 
             $('html, body').animate({
                 scrollTop: targetOffset
-            }, 500); // Adjust duration for desired speed
+            }, 200); // Adjust duration for desired speed
         }
     });
 
@@ -27,41 +27,11 @@ $(document).ready(function() {
     var backToTop = $('.back-to-top');
     backToTop.hide();
 
-    // // Scroll event handler
-    // $(window).on('scroll', function() {
-    //     var scrollPos = $(document).scrollTop();
-
-    //     // Show or hide the back-to-top button
-    //     if (scrollPos > 300) {
-    //         backToTop.fadeIn();
-    //     } else {
-    //         backToTop.fadeOut();
-    //     }
-
-    //     // Active Navigation State
-    //     $('nav a.nav-link').each(function() {
-    //         var currLink = $(this);
-    //         var refElement = $(currLink.attr("href"));
-
-    //         if (refElement.length) {
-    //             var refElementTop = refElement.offset().top - 150;
-    //             var refElementBottom = refElementTop + refElement.outerHeight();
-
-    //             if (scrollPos >= refElementTop && scrollPos < refElementBottom) {
-    //                 $('nav ul li a.nav-link').removeClass("active");
-    //                 currLink.addClass("active");
-    //             } else {
-    //                 currLink.removeClass("active");
-    //             }
-    //         }
-    //     });
-    // });
-
     $(window).on('scroll', function() {
         var scrollPos = $(document).scrollTop();
     
         // Show or hide the back-to-top button
-        if (scrollPos > 300) {
+        if (scrollPos > 500) {
             backToTop.fadeIn();
         } else {
             backToTop.fadeOut();
