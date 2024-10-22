@@ -1,4 +1,4 @@
-# 🌟 Yarden Itzhaky - Portfolio
+# 🌟 Yarden Itzhaky - Portfolio - **[View Website](https://yardenitzhaky.github.io/Portfolio/)**
 
 [![Website](https://img.shields.io/website-up-down-green-red/https/yardenitzhaky.github.io/Portfolio.svg)](https://yardenitzhaky.github.io/Portfolio/) [![GitHub followers](https://img.shields.io/github/followers/yardenitzhaky.svg?style=social&label=Follow)](https://github.com/yardenitzhaky)
 
