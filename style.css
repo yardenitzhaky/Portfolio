@@ -236,7 +236,8 @@ html {
         width: 100%;
         padding-left: 60px; /* Increased padding to accommodate the circle */
         padding-right: 25px;
-        margin-bottom: 30px; /* Add space between timeline items */
+        margin-bottom: 30px;
+        box-sizing: border-box; /* Add space between timeline items */
     }
     
     /* Adjust the position and size of the timeline circles */
@@ -266,6 +267,13 @@ html {
     .timeline-item:nth-child(odd) .timeline-content,
     .timeline-item:nth-child(even) .timeline-content {
         text-align: left; /* Align text to the left for consistency */
+    }
+}
+
+
+@media (max-width: 767px) {
+    #about .col-md-6:last-child {
+        margin-top: 2rem;
     }
 }
 
@@ -405,12 +413,6 @@ section {
     border: none;
     background-color: transparent;
     padding: 10px 0;
-}
-
-@media (max-width: 767px) {
-    #about .col-md-6:last-child {
-        margin-top: 2rem;
-    }
 }
 
 .nav-link.active {
